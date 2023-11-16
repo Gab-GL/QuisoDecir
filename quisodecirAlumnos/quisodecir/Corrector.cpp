@@ -48,11 +48,12 @@ void	Diccionario			(char *szNombre, char szPalabras[][TAMTOKEN], int iEstadistic
 			fgets(linea, sizeof(linea), fpDicc);
 			if (DEPURAR == 1)
 				printf("\n%s\n", linea);
+			
 			for (i = 0; i < strlen(linea); i++)
 			{
 
 				// Detectar una palabra
-				if (linea[i] == ' ' && linea[i + 1] != ' ')
+				if ((linea[i] == ' ' || linea[i] == '\n') && linea[i + 1] != ' ')
 				{
 					palabraDetectada[indicePD] = '\0';
 					strcpy_s(szPalabras[iNumElementos], TAMTOKEN, palabraDetectada);
@@ -69,6 +70,7 @@ void	Diccionario			(char *szNombre, char szPalabras[][TAMTOKEN], int iEstadistic
 		
 					if ((linea[i] >= 65 && linea[i] <= 90) || (linea[i] >= 97 && linea[i] <= 122))
 					{
+						linea[i] = towlower(linea[i]);
 						palabraDetectada[indicePD] = linea[i];
 						indicePD++;
 					}
@@ -77,11 +79,55 @@ void	Diccionario			(char *szNombre, char szPalabras[][TAMTOKEN], int iEstadistic
 
 		}
 
+
 			if (DEPURAR == 1)
-				printf("\nNumPalabras: %i\n", iNumElementos);
+				//// PALABRAS EN EL DOCUMENTO printf("\nNumPalabras: %i\n", iNumElementos);
+				
+			//CONTAR CUANTAS VECES SE REPTIE LA MISMA PALABRA Y ELMINAR LAS REPETIDAS DE LA LISTA
+			for (int i = 0; i < iNumElementos; i++) {
+				for (int j = i + 1; j < iNumElementos; j++) {
+					if (strcmp(szPalabras[i], szPalabras[j]) == 0) {
+                        iEstadisticas[i] = iEstadisticas[i] + 1;
+						// Eliminar duplicados moviendo los elementos restantes hacia arriba
+						for (int k = j; k < iNumElementos - 1; k++) {
+							strcpy_s(szPalabras[k], szPalabras[k + 1]);
+							
+						}
+						iNumElementos--;
+						j--;
+					}
+                    
+				}
+                 
+			}
 
-			// burbujazo
+			printf("\nNumPalabras: %i\n", iNumElementos);
+			// ORDENAR LAS PALABRAS POR ORDEN ALFABETICO
+			for (int i = 0; i < iNumElementos - 1; i++) {
+				for (int j = 0; j < iNumElementos - i ; j++) {
+					if (strcmp(szPalabras[j], szPalabras[j + 1]) > 0) {
+						// Intercambiar números de cuenta y calificaciones
+						char auxPalabra[TAMTOKEN];
+						int auxEstadistica;
 
+
+						strcpy_s(auxPalabra, szPalabras[j]);
+						auxEstadistica = iEstadisticas[j];
+
+
+						strcpy_s(szPalabras[j], szPalabras[j + 1]);
+						auxEstadistica = iEstadisticas[j + 1];
+
+
+						strcpy_s(szPalabras[j + 1], auxPalabra);
+						iEstadisticas[j + 1] = auxEstadistica;
+
+					}
+				}
+
+
+
+			}
 		fclose(fpDicc);
 	}
 	else
