@@ -15,6 +15,7 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	
 	char	szNombre[50];
 	char	szPalabras[NUMPALABRAS][TAMTOKEN];
 	int		iEstadisticas[NUMPALABRAS];
@@ -26,7 +27,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	char	szListaFinal[3300][TAMTOKEN];
 	int		iPeso[3300]; //son 66 combinaciones por letra, mas o menos 3300 para 50 letras
 	int		iNumLista;
-
+	
 	//Inicia el arreglo de estadisticas
 	for (i=0; i< NUMPALABRAS; i++)
 		iEstadisticas[i] = 0;
@@ -40,7 +41,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	Diccionario(szNombre, szPalabras, iEstadisticas, iNumElementos);
 
 	//Pinta las palabras del diccionario y sus estadisticas
-	for (int j=0; j < iNumElementos -1; j++)
+    for (int j=0; j < iNumElementos ; j++)
 		printf("%-12s %i\n", szPalabras[j],iEstadisticas[j]);
 		
 	//Mientras no se capture el comando para salir y poner <fin>
@@ -57,7 +58,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 		//Pinta la lista de palabras calculadas
-		for (int j=0; j < iNumSugeridas-1; j++)
+		for (int j=0; j < iNumSugeridas; j++)
 			printf("%s\n", szPalabrasSugeridas[j]);
 
 		//Con esa lista de palabras y el diccionario, recupera las sugerencias

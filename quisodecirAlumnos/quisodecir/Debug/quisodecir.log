@@ -1,6 +1,23 @@
 ﻿  Corrector.cpp
-C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(52,18): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(73,26): warning C4244: '=': conversión de 'wint_t' a 'char'; posible pérdida de datos
-C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(164,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(182,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(59,24): warning C4244: '=': conversión de 'wint_t' a 'char'; posible pérdida de datos
+  (compilando archivo de origen "/Corrector.cpp")
+  
+C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(271,20): warning C4018: '<': no coinciden signed/unsigned
+  (compilando archivo de origen "/Corrector.cpp")
+  
+C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(272,21): warning C4018: '<': no coinciden signed/unsigned
+  (compilando archivo de origen "/Corrector.cpp")
+  
+C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(282,17): warning C4018: '<': no coinciden signed/unsigned
+  (compilando archivo de origen "/Corrector.cpp")
+  
+C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(288,21): warning C4018: '<': no coinciden signed/unsigned
+  (compilando archivo de origen "/Corrector.cpp")
+  
+C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(317,20): warning C4018: '<': no coinciden signed/unsigned
+  (compilando archivo de origen "/Corrector.cpp")
+  
+C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\quisodecir\Corrector.cpp(305,7): warning C4101: 'aux': variable local sin referencia
+  (compilando archivo de origen "/Corrector.cpp")
+  
   quisodecir.vcxproj -> C:\Users\gabri\Downloads\quisodecirAlumnosVisual2022\quisodecirAlumnos\Debug\quisodecir.exe

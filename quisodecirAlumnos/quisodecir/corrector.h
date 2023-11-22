@@ -11,8 +11,8 @@
 	
 ******************************************************************************************************************/
 
-#define TAMTOKEN	50						//tamaño maximo de cada palabra
-#define NUMPALABRAS 70000					//Numero maximo de palabras
+#define TAMTOKEN	50					//tamaño maximo de cada palabra
+#define NUMPALABRAS 700000					//Numero maximo de palabras
 
 
 //Funciones publicas para el proyecto
